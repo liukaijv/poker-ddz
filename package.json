@@ -1,0 +1,17 @@
+{
+  "name": "poker-ddz",
+  "version": "1.0.0",
+  "description": "Doudizhu Poker Library",
+  "main": "lib/index.js",
+  "typings": "lib/index.d.ts",
+  "scripts": {
+    "compile": "tsc -p tsconfig.json",
+    "test": "tsc -p tsconfig_test.json && ava \"test/**/*test.js\" --tap",
+    "prepublish": "rm -rf lib && tsc -p tsconfig.json"
+  },
+  "author": "noop",
+  "license": "MIT",
+  "devDependencies": {
+    "ava": "^0.24.0"
+  }
+}
