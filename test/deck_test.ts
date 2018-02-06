@@ -13,15 +13,12 @@ test('Deck shuffle', t => {
     t.is(54, deck.cards.length);
 });
 
-test('deal a card', t => {
+test('deal cards', t => {
     let deck: Deck = new Deck();
     deck.shuffle();
-    let lastCard: Card = deck.cards.slice(deck.cards.length - 1)[0];
-    let dealCard: Card = deck.deal();
-    t.is(53, deck.cards.length);
-    t.is(lastCard, dealCard);
-});
-
-test('deal cards', t => {
-    t.pass();
+    let dealCard: Card[][] = deck.dealCards();
+    t.is(4, dealCard.length);
+    t.is(17, dealCard[0].length);
+    t.is(17, dealCard[1].length);
+    t.is(17, dealCard[2].length);
 });

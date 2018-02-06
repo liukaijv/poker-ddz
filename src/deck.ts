@@ -42,4 +42,33 @@ export class Deck {
         return this.cards.pop();
     }
 
+    public dealCards(): Card[][] {
+
+        let cards1: Card[] = [],
+            cards2: Card[] = [],
+            cards3: Card[] = [],
+            leftCards: Card[] = [];
+
+        this.cards.forEach((card, index) => {
+            if (index <= 50) {
+                switch (index % 3) {
+                    case 0:
+                        cards1.push(card);
+                        break;
+                    case 1:
+                        cards2.push(card);
+                        break;
+                    case 2:
+                        cards3.push(card);
+                        break;
+                }
+            } else {
+                leftCards.push(card);
+            }
+        });
+
+        return [[...cards1], [...cards2], [...cards3], [...leftCards]];
+
+    }
+
 }
