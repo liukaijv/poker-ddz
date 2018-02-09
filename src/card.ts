@@ -7,7 +7,6 @@ export enum CardSuit{
 }
 
 export type CardValue =
-    '1'
     | '2'
     | '3'
     | '4'
