@@ -158,7 +158,7 @@ export class CardRule {
             return false;
         }
         let compareArr: number[] = ranks.map(rank => parseInt('' + rank)).sort((a, b) => b - a);
-        //2不能当连出
+        //2，双王不能作顺
         if (compareArr[0] >= 15) {
             return false;
         }

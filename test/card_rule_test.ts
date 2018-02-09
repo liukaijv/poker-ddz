@@ -27,6 +27,7 @@ test('possible Straight', t => {
     t.true(cardRule.possibleStraight([4, 5, 6]));
     t.true(cardRule.possibleStraight([6, 7, 8, 9]));
     t.false(cardRule.possibleStraight([1]));
+    t.false(cardRule.possibleStraight([14, 15]));
 });
 
 test('is One', t => {
